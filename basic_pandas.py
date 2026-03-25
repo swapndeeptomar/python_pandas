@@ -1,140 +1,140 @@
 import pandas as pd
 import numpy as np
 
-# #Series and DataFrame are the two main data structures in pandas. 
-# #A Series is a one-dimensional array-like object that can hold any data type
+#Series and DataFrame are the two main data structures in pandas.
+#A Series is a one-dimensional array-like object that can hold any data type
 
-# s=pd.Series()
-# print(s)
+s=pd.Series()
+print(s)
 
-# data=np.array(['a','b','c','d'])
-# s=pd.Series(data)
-# print(s)
+data=np.array(['a','b','c','d'])
+s=pd.Series(data)
+print(s)
 
-# print(s[1])
+print(s[1])
 
-# data2 = np.array(['g','e','e','k','s','f', 'o','r','g','e','e','k','s'])
-# ser = pd.Series(data2,index=[10,11,12,13,14,15,16,17,18,19,20,21,22])
+data2 = np.array(['g','e','e','k','s','f', 'o','r','g','e','e','k','s'])
+ser = pd.Series(data2,index=[10,11,12,13,14,15,16,17,18,19,20,21,22])
 
-# print(ser[16])
+print(ser[16])
 
-# series=pd.Series(df['Name'])
-# data=series.head(10)
-# print(data)
+series=pd.Series(df['Name'])
+data=series.head(10)
+print(data)
   
-# print(data.loc[3:6])
-# print(data.iloc[3:6])
+print(data.loc[3:6])
+print(data.iloc[3:6])
 
-# ser1 = pd.Series([1, 2, 3], index=['A', 'B', 'C'])
-# ser2 = pd.Series([4, 5, 6], index=['A', 'B', 'C'])
+ser1 = pd.Series([1, 2, 3], index=['A', 'B', 'C'])
+ser2 = pd.Series([4, 5, 6], index=['A', 'B', 'C'])
 
-# print(ser1.add(ser2))
-# print(ser1.mul(ser2))
-# print(ser1.mean())
+print(ser1.add(ser2))
+print(ser1.mul(ser2))
+print(ser1.mean())
 
-# print(ser1.astype(float))
+print(ser1.astype(float))
 
-# # A DataFrame is a two-dimensional table of data with rows and columns.
-# d=pd.DataFrame()
-# print(d)
+# A DataFrame is a two-dimensional table of data with rows and columns.
+d=pd.DataFrame()
+print(d)
 
-# lst=['car','bus','truck','plane','ship']
-# d=pd.DataFrame(lst)
-# print(d)
+lst=['car','bus','truck','plane','ship']
+d=pd.DataFrame(lst)
+print(d)
 
-# df=pd.read_csv("data.csv")
-# print(df.head())
-# print(df.info())
+df=pd.read_csv("data.csv")
+print(df.head())
+print(df.info())
 
-# print(df.isnull().sum())
+print(df.isnull().sum())
 
-# df.fillna(0, inplace=True)
-# print(df.isnull().sum())
-# print(df.head())
+df.fillna(0, inplace=True)
+print(df.isnull().sum())
+print(df.head())
 
-# age=df['age']
-# print(age)
+age=df['age']
+print(age)
 
-# print(df[df['age']>25]) #returns the rows where the age is greater than 25
-# print(df['age']>25) # returns a boolean series 
+print(df[df['age']>25]) #returns the rows where the age is greater than 25
+print(df['age']>25) # returns a boolean series 
 
-# df['total']=df['a']+df['b']
-# print(df.head())
+df['total']=df['a']+df['b']
+print(df.head())
 
-# print(df.describe()) # gives the statistical summary of the numerical columns in the DataFrame
-# print(df.describe())
+print(df.describe()) # gives the statistical summary of the numerical columns in the DataFrame
+print(df.describe())
 
 
-# df=pd.read_csv("nba.csv")
-# print(df.head())
+df=pd.read_csv("nba.csv")
+print(df.head())
 
-# print(df[['Name', 'Team']].head())
+print(df[['Name', 'Team']].head())
 
-# sorted_data=df.sort_values(by='Age',ascending=False)
-# print(sorted_data.head())
+sorted_data=df.sort_values(by='Age',ascending=False)
+print(sorted_data.head())
 
-# print(df.tail(3))
+print(df.tail(3))
 
-# percentiles = [.20, .40, .60, .80]
-# include = ['object', 'float', 'int']
-# desc=df.describe(percentiles=percentiles,include=include)
-# print(desc)
+percentiles = [.20, .40, .60, .80]
+include = ['object', 'float', 'int']
+desc=df.describe(percentiles=percentiles,include=include)
+print(desc)
 
-# print(df['Name'].describe) # gives the statistical summary of the 'Name' column in the DataFrame.
+print(df['Name'].describe) # gives the statistical summary of the 'Name' column in the DataFrame.
 
-# df=pd.read_csv("nba.csv")
-# print(df.head())
+df=pd.read_csv("nba.csv")
+print(df.head())
 
-# print(df[['Name','Team']])
+print(df[['Name','Team']])
 
-# df['Experience']=1
-# print(df.head())
+df['Experience']=1
+print(df.head())
 
-# df.drop('Experience', axis=1, inplace=True)
-# print(df.head())
+df.drop('Experience', axis=1, inplace=True)
+print(df.head())
 
-# # #Dealing with Rows in DataFrames
-# # first = df.loc["Avery Bradley"]
-# # print(first)
+#Dealing with Rows in DataFrames
+first = df.loc["Avery Bradley"]
+print(first)
 
-# #Adding a new row to the DataFrame:
-# new_row = {
-#     'Name': 'Geeks',
-#     'Team': 'Boston',
-#     'Number': 3,
-#     'Position': 'PG',
-#     'Age': 33,
-#     'Height': '6-2',
-#     'Weight': 189,
-#     'College': 'MIT',
-#     'Salary': 99999
-# }
+#Adding a new row to the DataFrame:
+new_row = {
+    'Name': 'Geeks',
+    'Team': 'Boston',
+    'Number': 3,
+    'Position': 'PG',
+    'Age': 33,
+    'Height': '6-2',
+    'Weight': 189,
+    'College': 'MIT',
+    'Salary': 99999
+}
 
-# new_row2 = {
-#     'Name': 'Deep',
-#     'Team': 'Boston',
-#     'Number': 5,
-#     'Position': 'PG',
-#     'Age': 21,
-#     'Height': '6-0',
-#     'Weight': 179,
-#     'College': 'SUAS',
-#     'Salary': 50000
-# }
+new_row2 = {
+    'Name': 'Deep',
+    'Team': 'Boston',
+    'Number': 5,
+    'Position': 'PG',
+    'Age': 21,
+    'Height': '6-0',
+    'Weight': 179,
+    'College': 'SUAS',
+    'Salary': 50000
+}
 
-# df=pd.concat([df,pd.DataFrame([new_row])], ignore_index=True)
-# print(df.tail())
+df=pd.concat([df,pd.DataFrame([new_row])], ignore_index=True)
+print(df.tail())
 
-# new_row_df=pd.DataFrame([new_row2])
-# print(new_row_df)
+new_row_df=pd.DataFrame([new_row2])
+print(new_row_df)
 
-# df=pd.concat([df,new_row_df], ignore_index=True)
-# print(df.tail())
+df=pd.concat([df,new_row_df], ignore_index=True)
+print(df.tail())
 
-# df.drop(458,inplace=True)
-# print(df.tail())
+df.drop(458,inplace=True)
+print(df.tail())
 
-#Accessing data using index based columns
+# Accessing data using index based columns
 
 df=pd.read_csv("data.csv",index_col='name')
 print(df.head(10))
@@ -145,3 +145,43 @@ print(df.loc['John':'Swapndeep'])
 df.drop("Riya",inplace=True)
 print(df.head())
 
+# importing pandas and numpy
+import pandas as pd
+import numpy as np
+ 
+df = pd.DataFrame(np.random.randn(10, 4),
+          columns = ['A', 'B', 'C', 'D'])
+
+print("Original DataFrame: \n" , df)
+ 
+# Integer slicing
+print("\n Slicing only rows:")
+print("--------------------------")
+x1 = df.iloc[:4, ]
+print(x1)
+ 
+print("\n Slicing rows and columns:")
+print("----------------------------")
+x2 = df.iloc[:4, 1:3]
+print(x2)
+
+# importing pandas module 
+import pandas as pd 
+  
+# making data frame 
+data = pd.read_csv("https://media.geeksforgeeks.org/wp-content/uploads/nba.csv") 
+  
+# removing null values to avoid errors 
+data.dropna(inplace = True) 
+
+# start stop and step variables
+start, stop, step = 0, -2, 1
+
+# converting to string data type
+data["Salary"]= data["Salary"].astype(str)
+
+# slicing till 2nd last element
+data["Salary (int)"]= data["Salary"].str.slice(start, stop, step)
+
+# display
+print(data.head(10))
